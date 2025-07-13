@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    <h2>{{ user.name }}</h2>
+  </div>
+  <div class="card-body">
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Role:</strong> {{ getRoleByRoleId(user.roleId) }}</p>
+  </div>
+</div>
+<div class="logout-confirmation">
+  <p>Are you sure you want to log out?</p>
+  <button class="confirm-button" (click)="logout()">Yes</button>
+  <button class="cancel-button" (click)="cancel()">No</button>
+</div>

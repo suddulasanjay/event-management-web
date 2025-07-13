@@ -1,0 +1,41 @@
+<h3>Registration Form</h3>
+<form [formGroup]="registrationForm" (submit)="OnSubmit()">
+  <div *ngFor="let field of fields" class="fields">
+    <div *ngIf="!isMultiChoiceField(field.fieldType)">
+      <label [for]="field.fieldName" class="label">{{ field.fieldName }}</label>
+      <input
+        [type]="getInputType(field.fieldType)"
+        class="input"
+        [formControlName]="field.fieldName"
+        [required]="field.isRequired"
+      />
+    </div>
+    <div *ngIf="isMultiChoiceField(field.fieldType)">
+      <div *ngIf="field.fieldType === 'radio'">
+        <label [for]="field.fieldName" class="label">{{
+          field.fieldName
+        }}</label>
+        <app-radio-field
+          [formControlName]="field.fieldName"
+          [options]="field.fieldOptions"
+        ></app-radio-field>
+      </div>
+      <div *ngIf="field.fieldType === 'dropdown'">
+        <label [for]="field.fieldName" class="label">{{
+          field.fieldName
+        }}</label>
+        <app-dropdown-field
+          [formControlName]="field.fieldName"
+          [options]="field.fieldOptions"
+        ></app-dropdown-field>
+      </div>
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="submit-btn"
+    [disabled]="registrationForm.invalid"
+  >
+    Submit
+  </button>
+</form>

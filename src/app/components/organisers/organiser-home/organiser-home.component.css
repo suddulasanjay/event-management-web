@@ -1,0 +1,53 @@
+:host {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #333;
+  margin-left: 20px;
+}
+
+.addEvent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.addEvent span {
+  display: flex;
+  align-items: center;
+}
+
+.addEvent i {
+  margin-left: 10px;
+  /* background: url("add-icon.png") no-repeat center center; */
+  width: 16px;
+  height: 16px;
+}
+
+.events {
+  margin: 20px;
+}
+
+.events ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.events ol {
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

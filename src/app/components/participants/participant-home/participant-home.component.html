@@ -1,0 +1,16 @@
+<h2>Registered Events</h2>
+<app-events-table
+  [events]="registeredEvents"
+  [isRegistered]="true"
+  [action]="'UnSubscribe'"
+  *ngIf="registeredEvents.length > 0"
+></app-events-table>
+<p *ngIf="registeredEvents.length == 0">No Registered Events</p>
+<h2>Upcoming Events</h2>
+<app-events-table
+  [events]="upcomingEvents"
+  [isRegistered]="false"
+  [action]="'Register'"
+  *ngIf="upcomingEvents.length > 0"
+></app-events-table>
+<p *ngIf="upcomingEvents.length == 0">No Upcoming Events</p>

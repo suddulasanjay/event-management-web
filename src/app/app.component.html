@@ -1,0 +1,60 @@
+<div class="container">
+  <header>
+    <h1>Event Management Platform</h1>
+    <div class="user" *ngIf="user.roleId !== 0">
+      <div class="round" (click)="goProfile()">
+        <h1>{{ user.name.charAt(0).toUpperCase() }}</h1>
+      </div>
+    </div>
+  </header>
+  <div class="main">
+    <div class="navbar" *ngIf="displayNavbar">
+      <div class="admin" *ngIf="role == 1">
+        <li><a [routerLink]="['/admin/home']" class="navitem">HOME</a></li>
+        <li>
+          <a [routerLink]="['/organizer/add-event']" class="navitem"
+            >CREATE EVENT</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['/organizer/home']" class="navitem">MY EVENTS</a>
+        </li>
+        <li>
+          <a [routerLink]="['/participant/home']" class="navitem">ALL EVENTS</a>
+        </li>
+      </div>
+      <div class="organizer" *ngIf="role == 2">
+        <li><a [routerLink]="['/organizer/home']" class="navitem">HOME</a></li>
+        <li>
+          <a [routerLink]="['/organizer/add-event']" class="navitem"
+            >CREATE EVENT</a
+          >
+        </li>
+        <li>
+          <a [routerLink]="['/participant/home']" class="navitem">ALL EVENTS</a>
+        </li>
+      </div>
+      <div class="user" *ngIf="role == 3 || role == 0">
+        <li>
+          <a [routerLink]="['/participant/home']" class="navitem">HOME</a>
+        </li>
+      </div>
+      <div class="notuser" *ngIf="role === 0">
+        <li>
+          <a [routerLink]="['/user/login']" class="navitem">LOG IN</a>
+        </li>
+      </div>
+      <div class="notuser" *ngIf="role !== 0">
+        <li>
+          <a [routerLink]="['/user/logout']" class="navitem">LOG OUT</a>
+        </li>
+      </div>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <footer class="emp-footer">
+    <p>EventsManagementPlatform ©2024</p>
+  </footer>
+</div>

@@ -1,0 +1,54 @@
+<h2>Register :</h2>
+<form class="register-form" [formGroup]="registerForm" (submit)="OnSubmit()">
+  <label for="name" class="name">Name</label>
+  <input type="text" id="name" formControlName="name" />
+  <label for="email" class="email">Email</label>
+  <input type="text" id="email" formControlName="email" />
+  <p class="role">Role</p>
+  <div class="roles">
+    <input
+      type="radio"
+      id="admin"
+      name="role"
+      value="admin"
+      formControlName="role"
+    />
+    <label for="admin">Admin</label>
+    <input
+      type="radio"
+      id="organiser"
+      name="role"
+      value="organizer"
+      formControlName="role"
+    />
+    <label for="organiser">Organizer</label>
+    <input
+      type="radio"
+      id="participant"
+      name="role"
+      value="participant"
+      formControlName="role"
+    />
+    <label for="participant">Participant</label>
+  </div>
+
+  <label for="password" class="password">Password</label>
+  <input type="password" id="password" formControlName="password" />
+  <label for="ConfirmPassword" class="confirmPassword">Confirm Password</label>
+  <input type="password" id="ConfirmPassword" />
+  <button type="submit" class="button" [class.disabled]="registerForm.invalid">
+    Register
+  </button>
+</form>
+<p class="login">
+  Already have an account? <a routerLink="/user/login">login here</a>
+</p>
+<p>---- or sign in with -----</p>
+<div class="authentication">
+  <i class="fa-brands fa-microsoft"></i>
+  <span>Microsoft</span>
+</div>
+<div class="authentication">
+  <i class="fa-brands fa-google"></i>
+  <span>Google</span>
+</div>

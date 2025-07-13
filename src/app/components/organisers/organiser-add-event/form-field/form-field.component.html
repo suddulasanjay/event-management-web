@@ -1,0 +1,37 @@
+<form
+  [formGroup]="fieldForm"
+  (submit)="OnSubmit()"
+  class="form"
+  *ngIf="isAlive"
+>
+  <div class="name">
+    <label for="fieldName">Field Name:</label>
+    <input id="fieldName" formControlName="fieldName" />
+  </div>
+  <div>
+    <label for="fieldType">Field Type:</label>
+    <select id="fieldType" formControlName="fieldType" #type>
+      <option *ngFor="let type of inputTypes" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+  <div class="type">
+    <label for="isRequired">Required ?</label>
+    <input type="checkbox" id="isRequired" formControlName="isRequired" />
+  </div>
+  <div *ngIf="isMultiChoiceField(type.value)" class="options">
+    <label for="options">Options</label>
+    <input
+      type="text"
+      formControlName="fieldOptions"
+      (focus)="ToggleInstruction()"
+      (blur)="ToggleInstruction()"
+    />
+    <small *ngIf="showInstruction" class="instruction"
+      >Enter the available options for the field as comma separated
+      string</small
+    >
+  </div>
+  <div class="delete">
+    <i class="fa-solid fa-trash delete-icon" (click)="removeField()"></i>
+  </div>
+</form>

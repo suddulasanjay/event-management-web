@@ -1,0 +1,50 @@
+.event-card {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.details p strong {
+  color: #000;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 0.25em;
+}
+
+.heading,
+.row {
+  border: 1px solid #ddd;
+
+  text-align: left;
+}
+.column {
+  max-width: min-content;
+  padding: 0.7em;
+}
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}

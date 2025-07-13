@@ -1,0 +1,88 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f4f4f9;
+  background: #fff;
+  padding: 1em;
+}
+.register-form {
+  display: block;
+  width: 70%;
+  font-family: Arial, sans-serif;
+
+  padding: 20px;
+
+  /* max-width: 400px; */
+}
+
+.name,
+.email,
+.password,
+.confirmPassword,
+.roles {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.authentication {
+  width: 70%;
+  margin-top: 0.25em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+  padding: 1em;
+  border: 2px solid black;
+}
+
+.login {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  font-weight: initial;
+}
+
+.login a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}

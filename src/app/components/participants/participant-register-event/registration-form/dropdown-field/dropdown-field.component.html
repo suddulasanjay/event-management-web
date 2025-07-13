@@ -1,0 +1,5 @@
+<select id="dropdown" class="form-control" [formControl]="dropdownControl">
+  <option *ngFor="let option of options" [value]="option">
+    {{ option }}
+  </option>
+</select>

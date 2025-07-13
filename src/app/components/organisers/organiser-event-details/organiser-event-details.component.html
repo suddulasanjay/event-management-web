@@ -1,0 +1,31 @@
+<div class="event-card" *ngIf="event">
+  <h2>{{ event.title }}</h2>
+  <p class="description">{{ event.description }}</p>
+  <div class="details">
+    <p>
+      <strong>Start Date:</strong> {{ event.startDate | date : "longDate" }}
+    </p>
+    <p><strong>End Date:</strong> {{ event.endDate | date : "longDate" }}</p>
+    <p><strong>Location:</strong> {{ event.location }}</p>
+    <p><strong>Price:</strong> {{ event.price | currency }}</p>
+  </div>
+</div>
+<div class="registrations">
+  <h1>Registrations</h1>
+  <table class="table">
+    <thead class="heading thead-light">
+      <tr>
+        <th class="column">Name</th>
+        <th class="column">Email</th>
+        <th class="column">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users" class="row">
+        <td class="column">{{ user.name }}</td>
+        <td class="column">{{ user.email }}</td>
+        <td class="column">{{ getRoleByRoleId(user.roleId) }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

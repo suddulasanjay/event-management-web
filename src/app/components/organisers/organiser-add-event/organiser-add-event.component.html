@@ -1,0 +1,83 @@
+<form [formGroup]="addEventForm" (submit)="OnSubmit()" class="form">
+  <div class="title">
+    <label for="eventName" class="eventName">Event Name</label>
+    <input
+      type="text"
+      id="eventName"
+      name="eventName"
+      formControlName="title"
+    />
+  </div>
+
+  <div class="descriptionDiv">
+    <label for="description" class="description">Description</label>
+    <input
+      type="text"
+      id="description"
+      name="description"
+      formControlName="description"
+    />
+  </div>
+
+  <div class="locationDiv">
+    <label for="location" class="location">Location</label>
+    <input
+      type="text"
+      id="location"
+      name="location"
+      formControlName="location"
+    />
+  </div>
+
+  <div class="startDateDiv">
+    <label for="startDate" class="startDate">Start Date</label>
+    <input
+      type="date"
+      id="startDate"
+      name="startDate"
+      formControlName="startDate"
+    />
+  </div>
+
+  <div class="endDateDiv">
+    <label for="endDate" class="endDate">End Date</label>
+    <input type="date" id="endDate" name="endDate" formControlName="endDate" />
+  </div>
+
+  <div class="isPublishedDiv">
+    <p>Is Published</p>
+    <input
+      type="radio"
+      id="publishedYes"
+      name="isPublished"
+      [value]="true"
+      formControlName="isPublished"
+    />
+    <label for="publishedYes">Yes</label>
+    <input
+      type="radio"
+      id="publishedNo"
+      name="isPublished"
+      [value]="false"
+      formControlName="isPublished"
+    />
+    <label for="publishedNo">No</label>
+  </div>
+
+  <div class="priceDiv">
+    <label for="price" class="price">price</label>
+    <input type="number" id="price" name="price" formControlName="price" />
+  </div>
+
+  <div class="fields">
+    <div class="fields-header">
+      <p>Fields</p>
+      <i class="fa-solid fa-plus" (click)="addFormField()"></i>
+    </div>
+    <div class="formfields">
+      <div #fields></div>
+    </div>
+  </div>
+
+  <button type="submit" class="submit-btn">Submit</button>
+</form>

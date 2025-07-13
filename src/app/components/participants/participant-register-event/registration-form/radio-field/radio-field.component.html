@@ -1,0 +1,9 @@
+<div *ngFor="let option of options">
+  <input
+    type="radio"
+    [formControl]="radioControl"
+    [value]="option"
+    id="{{ option }}"
+  />
+  <label for="{{ option }}">{{ option }}</label>
+</div>

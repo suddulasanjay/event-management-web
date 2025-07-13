@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 0.25em;
+}
+
+.heading,
+.row {
+  border: 1px solid #ddd;
+
+  text-align: left;
+}
+.column {
+  max-width: min-content;
+  padding: 0.7em;
+}
+.action {
+  width: 80%;
+  background-color: rgba(46, 46, 230, 0.827);
+  border-radius: 5px;
+  color: white;
+  padding: 0.5em;
+  border: none;
+}
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}

@@ -1,0 +1,10 @@
+<form class="login-form" [formGroup]="loginForm" (submit)="OnSubmit()">
+  <label for="email" class="email">Email</label>
+  <input type="email" id="email" formControlName="email" />
+  <label for="password" class="password">Password</label>
+  <input type="password" id="password" formControlName="password" />
+  <button type="submit" [disabled]="loginForm.invalid">Log In</button>
+  <p class="register">
+    Don't have an account? <a routerLink="/user/register">register here</a>
+  </p>
+</form>

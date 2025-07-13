@@ -1,0 +1,63 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+### Angular ###
+/.angular/cache
+.angular/
+dist/
+aot/
+tmp/
+out-tsc/
+
+### Node ###
+/node_modules
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+.pnpm-debug.log
+
+### Babel ###
+/.babelrc
+babel.config.json
+*.babelcache
+
+### IDEs and Editors ###
+.idea/
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+*.swp
+*.swo
+
+### Testing ###
+/coverage
+*.lcov
+junit.xml
+test-results.xml
+
+### System ###
+.DS_Store
+Thumbs.db
+*.orig
+*.log
+
+### Environment ###
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+### Misc ###
+*.tsbuildinfo
+.cache/
+.parcel-cache/
+.serverless/
+.awcache/
+.firebase/
+.vercel/
+.netlify
+.svelte-kit

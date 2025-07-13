@@ -1,0 +1,7 @@
+<h2>Events</h2>
+<app-events-table
+  [events]="events"
+  [action]="'Details'"
+  *ngIf="events.length > 0"
+></app-events-table>
+<p *ngIf="events.length == 0">No Events</p>

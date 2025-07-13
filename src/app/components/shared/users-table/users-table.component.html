@@ -1,0 +1,22 @@
+<table class="table">
+  <thead class="heading thead-light">
+    <tr>
+      <th class="column">Name</th>
+      <th class="column">Email</th>
+      <th class="column">Role</th>
+      <th class="column">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" class="row">
+      <td class="column">{{ user.name }}</td>
+      <td class="column">{{ user.email }}</td>
+      <td class="column">{{ getRoleByRoleId(user.roleId) }}</td>
+      <td class="column">
+        <button class="action btn btn-primary" (click)="takeAction(user)">
+          Edit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

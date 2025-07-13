@@ -1,0 +1,18 @@
+<div class="event-card" *ngIf="event">
+  <h2>{{ event.title }}</h2>
+  <p class="description">{{ event.description }}</p>
+  <div class="details">
+    <p>
+      <strong>Start Date:</strong> {{ event.startDate | date : "longDate" }}
+    </p>
+    <p><strong>End Date:</strong> {{ event.endDate | date : "longDate" }}</p>
+    <p><strong>Location:</strong> {{ event.location }}</p>
+    <p><strong>Price:</strong> {{ event.price | currency }}</p>
+  </div>
+</div>
+
+<app-registration-form
+  [formFields]="fields"
+  *ngIf="fields.length > 0"
+  [eventId]="event.eventId"
+></app-registration-form>
